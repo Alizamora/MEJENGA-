@@ -1,0 +1,33 @@
+.logo__title {
+  margin: 0;
+  color: #fff;
+  span {
+    letter-spacing: 3vw;
+    display: block;
+    font-size: 10vw;
+    @media (min-width: 641px) {
+      letter-spacing: 33px;
+      font-size: 100px;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    margin: 50px 25px;
+  }
+}
+
+.logo__image {
+  height: 30vw;
+  width: 30vw;
+  background-image: url($img-path + '/svg/futbol-solid.svg');
+  background-size: contain;
+  @media (min-width: 641px) {
+    height: 256px;
+    width: 256px;
+  }
+}

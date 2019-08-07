@@ -1,5 +1,9 @@
 $img-path: 'https://luisarmando-testcoder.github.io/keeper/images/';
 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -13,6 +17,8 @@ p {
 
 .container {
   min-height: 100vh;
+  box-shadow: inset 0 -100px 200px #000;
+  background-color: #000;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
