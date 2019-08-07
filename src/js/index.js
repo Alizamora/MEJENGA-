@@ -8,7 +8,4 @@ import '../scss/style.scss';
 import './registerServiceWorker';
 
 dayjs.locale('es');
-const container = document.getElementById('container');
-const hour = document.createElement('p');
-hour.innerHTML = `Hora actual: ${dayjs().format('h:mm a')}`;
-container.appendChild(hour);
+// const container = document.getElementById('container');
