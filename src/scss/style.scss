@@ -1,23 +1,10 @@
-$img-path: 'https://luisarmando-testcoder.github.io/keeper/images/';
+@import './global';
 
-body {
-  margin: 0;
-  padding: 0;
-}
+@import './fonts/fonts';
+@import './helpers/variables';
+@import './helpers/mixins';
 
-p {
-  color: blue;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-}
+@import './components/buttons';
+@import './components/menu';
 
-.container {
-  min-height: 100vh;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-image: url($img-path + 'Background-log-in.jpg');
-  @media (min-width: 641px) {
-    background-image: url($img-path + 'Background-log-in-HD.jpg');
-  }
-}
+@import './pages/';
