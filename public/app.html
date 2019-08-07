@@ -1,0 +1,224 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Mejega!</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<!--Pagina Principal container-->
+	<div class="paginaPrincipal">
+		<!--Header-->
+		<header>
+			<!--Menu-->
+			<button id="menu"><img src="" alt="icono del menu"></button>
+			<div id="menuContainer">
+				<h3 id="menuTitle">Menú</h3>
+				<button id="equix"></button>
+				<div class="fotoPerfilContenedor">
+					<img src="" alt="Imagen de perfil del usuario" class="imgUsuario">
+				</div>
+				<h4 id="nombreDelUsuarioMenu" class="nombreDelUsuarioMenu">Nombre de usuario</h4>
+				<button id="btnVerperfil">
+					<img src="" alt="icono de ver perfil">
+					<span>Ver perfil</span>
+				</button>
+				<button id="btnEditarPerfil">
+					<img src="" alt="icono de editar perfil">
+					<span>Editar perfil</span>
+				</button>
+				<button id="btnNotificaciones">
+					<img src="" alt="icono de Notificaciones">
+					<span>Notificaciones</span>
+				</button>
+				<button id="btnCerrarSesion">
+					<img src="" alt="icono de salir de sesion">
+					<span>Cerrar sesion</span>
+				</button>
+			</div>
+			<!--End menu-->
+			<button id="btnNotification"></button>
+			<div class="notificacionContainer"></div>
+			<div class="btnCalendar"></div>
+			<div class="calendarContainer"></div>
+		</header>
+		<!--End header-->
+
+		<!--Editar Perfil-->
+		<div class="editarPerfil">
+			<header>
+				<button id="regresar" class="regresar"></button>
+				<h3 class="perfilTitle">Editar perfil</h3>
+			</header>
+			<div class="EditPerfilContainer">
+				<div class="fotoPerfilContenedor">
+					<img src="" alt="Imagen de perfil del usuario" class="imgUsuario">
+					<button id="AddNewPhoto"></button>
+				</div>
+				<form action="">
+					<label for="userName">Mi nombre</label>
+					<input type="text" id="userName">
+					<label for="userAlias">Apodo</label>
+					<input type="text" id="userAlias">
+					<label for="email"></label>
+					<input type="email" name="email" id="email">
+					<label for="nacionalidad">Nacionalidad</label>
+					<input type="text" id="nacionalidad">
+					<select name="provincia" id="miProvicia">
+						<option value="SanJose">San Jose</option>
+						<option value="Heredia">Heriadia</option>
+						<option value="Alajuela">Alajuela</option>
+						<option value="Puntarenas">Puntarenas</option>
+						<option value="Guanacaste">Guanacaste</option>
+						<option value="Limon">Limon</option>
+						<option value="Cartago">Cartago</option>
+					</select>
+					<label for="fechaDeNacimiento">Fecha de nacimiento</label>
+					<div id="fechaDeNacimiento"></div>
+					<label for="genero">Genero</label>
+					<select name="genero" id="genero">
+						<option value="mujer">Mujer</option>
+						<option value="hombre">Hombre</option>
+					</select>
+					<label for="PosicionDeJuego">Posición de Juego</label>
+					<select name="PosicionDeJuego" id="PosicionDeJuego">
+						<option value=delantero>Delantero(a)</option>
+						<option value="defensa">Defensa</option>
+						<option value="portero">Portero(a)</option>
+					</select>
+					<label for="numeroDeCamisa">Número de camisa</label>
+					<input type="number" name="numeroDeCamisa" id="numeroDeCamisa">
+					<div class="diasDisponibles">
+						<span class="perfilText">Días disponibles</span>
+						<!-- <label for="">
+							<span>Lu</span>
+							<input type="checkbox">
+							<div></div>
+						</label> -->
+					</div>
+					<label for="Horas disponibles">
+						<label for="de" class="horasDisponibles">De
+							<!-- <select name="" id="">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+									<select name="" id="">
+										<option value="am">am</option>
+										<option value="pm">pm</option>
+									</select> -->
+						</label>
+						<label for="Hasta" class="horasDisponibles"></label>
+					</label>
+
+					<button type="submit">Guardar cambios</button>
+				</form>
+			</div>
+		</div>
+		<!--End Editar perfil-->
+
+		<!--User Profile-->
+		<div class="perfilDeUsuario">
+			<header>
+				<button id="regresar" class="regresar"></button>
+				<h3 class="perfilName">Nombre de Usuario</h3>
+				<span id="posicionDeljugador">Delantera</span>
+				<button id="perfilMenu">
+					<img src="" alt="icono del menu del perfil del usuario">
+				</button>
+				<div class="perfilMenuContainer"></div>
+			</header>
+			<button class="likes">
+				<img src="" alt="Icono de corazon, que representa los likes del jugador">
+				<span id="likesNumber"></span>
+			</button>
+			<div class="fotoPerfilContenedor">
+				<img src="" alt="Imagen de perfil del usuario" class="imgUsuario">
+				<span id="conectado"></span>
+			</div>
+			<button class="mensaje">
+				<img src="" alt="button para enviar un mensaje">
+				<span class="mensajeDescription">Enviar mensaje</span>
+			</button>
+
+			<!--informaci[on basica del ususario-->
+			<div class="infoUsuario">
+				<span class="perfilText" id="miGenero">Mujer</span>
+				<span id="miNumeroDeCamisa">#4</span>
+				<span class="perfilText" id="miEdad">22 años</span>
+				<span class="perfilText" id="miProvincia">Heredia</span>
+				<span class="perfilText" id="Nacionalidad">Costarricense</span>
+			</div>
+			<!--End Informacion basica del ususario-->
+			<span class="line"></span>
+			<!--Partidos jugados-->
+			<div id="partidosJugados">
+				<h4 class="perfilSecundaryTitle">Partidos jugados</h4>
+				<span id="cantidadPartidos" class="perfilText">13 mejengas</span>
+			</div>
+			<!--End Partidos jugados-->
+			<span class="line"></span>
+			<!--Informacion Extra-->
+			<div class="extraInfoUser">
+				<div class="disponibilidad">
+						<h4 class="perfilSecundaryTitle">Disponibilidad</h4>                         
+					<span class="perfilText">Días disponibles</span>
+					<div class="diasDisponibles"></div>
+					<span class="perfilText">Horas disponibles</span>
+					<p class="perfilText">De <span class=""></span>a<span class=""></span></p>
+				</div>
+				<div class="misEquipos">
+						<h4 class="perfilSecundaryTitle">Equipos a los que pertenezco</h4>
+						<ul class="listaDeEquipos">
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+				</div>
+				<span class="line"></span>
+				<button id="reclutarJugador">Reclutar jugador</button>
+			</div>
+		</div>
+		<!--End user profile-->
+
+		<!--Seccion principal-->
+		<div class="seccionPrincipal">
+			<span>En construcción</span>
+			<img src="" alt="Icono ilustrativo que dice que la página está en construcción">
+			<p>Las unicas opciones que están habilitadas son:</p>
+			<ul>
+				<li>Editar perfil</li>
+				<li>Crear equipos</li>
+			</ul>
+		</div>
+
+		<!--Footer-->
+		<footer>
+			<nav>
+				<ul>
+					<li id="btnBuscar"><a href="#"></a></li>
+					<li id="btnPublicar"><a href="#"></a></li>
+					<li id="btnMejenga"><a href="#"></a></li>
+					<li id="btnEquipos"><a href="#"></a></li>
+					<li id="btnCancha"><a href="#"></a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+
+</html>

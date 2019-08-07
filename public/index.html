@@ -11,15 +11,105 @@
 
 <body>
   <div class="container" id="container">
-    <header class="logo">
-      <h1 class="logo__title">
-        <span>ME</span>
-        <span>JEN</span>
-        <span>GA!</span>
-      </h1>
-      <div class="logo__image"></div>
-    </header>
-  </div>
+
+
+    <!--LogIn container-->
+    <div class="logIn">
+      <div class="inicio">
+        <img src="" alt="logo de la webApp">
+        <button id="btnCreeSuCuenta" class="btnCreeSuCuenta">Cree su cuenta</button>
+        <div class="accederCon">
+          <span class="o">o</span>
+          <button id="btnFacebook"></button>
+          <button id="btnGoogle"></button>
+        </div>
+        <button id="bntYaTengoCuenta" class="bntYaTengoCuenta">Ya tengo cuenta</button>
+      </div>
+
+      <div class="crearCuenta">
+        <div class="headerLogIn">
+          <button id="regresar" class="regresar"></button>
+          <h3 class="logInTitle">Crear cuenta</h3>
+        </div>
+        <form action="https://mejenga-api.herokuapp.com/api/v1/users" method="POST">
+          <label for="userName"></label>
+          <input type="text" id="userName" name="userName" placeholder="Nombre de usuario" required>
+          <label for="email"></label>
+          <input type="email" name="email" id="email" placeholder="Correo" required>
+          <label for="password"></label>
+          <input type="password" name="password" id="password" placeholder="Contraseña" required>
+          <button type="submit" class="logInButton" id="btnCrearCuenta">Crear</button>
+          <div class="accederCon">
+            <span class="o">o</span>
+            <button id="btnFacebook"></button>
+            <button id="btnGoogle"></button>
+          </div>
+        </form>
+      </div>
+
+      <div class="acceder">
+        <div class="headerLogIn">
+          <button id="regresar" class="regresar"></button>
+          <h3 class="logInTitle">Acceder</h3>
+        </div>
+        <form action="https://mejenga-api.herokuapp.com/api/v1/login" method="GET">
+          <label for="accederCorreo" class="accederCorreo"></label>
+          <input type="text" id="accederCorreo" class="accederCorreo" required>
+          <label for="accederContraseña"></label>
+          <input type="password" id="accederContraseña" class="accederContraseña" required>
+          <button type="submit" class="logInButton">Acceder</button>
+        </form>
+      </div>
+
+      <div class="olvidoSuContraseña">
+        <div class="headerLogIn">
+          <button id="regresar" class="regresar"></button>
+          <h3 class="logInTitle">¿Olvidó su contraseña?</h3>
+        </div>
+        <p class="logInDescripcion">¿Desea enviar un código de verificación al correo ingresado?</p>
+        <button type="submit" class="logInButton">Enviar</button>
+      </div>
+
+      <div class="codigoDeVerificacion">
+        <div class="headerLogIn">
+          <button id="regresar" class="regresar"></button>
+          <h3 class="logInTitle">Se envió exitosamente el código de verificación</h3>
+        </div>
+        <form action="">
+          <label for="codigo"></label>
+          <input type="text" id="codigo"required></input>
+          <button type="submit" class="logInButton">Verificar</button>
+        </form>
+      </div>
+
+      <div class="nuevaContraseña">
+        <div class="headerLogIn">
+          <button id="regresar" class="regresar"></button>
+          <h3 class="logInTitle">Ingrese una nueva contraseña</h3>
+        </div>
+        <form action="">
+          <label for="nuevaContraseña"></label>
+          <input type="password" id="nuevaContraseña" required></input>
+          <label for="verificacion"></label>
+          <input type=password id="verificacion" required></input>
+          <button type="submit" class="logInButton">Verificar</button>
+        </form>
+      </div>
+      <div class="contraseñaConfimada">
+        <div class="headerLogIn">
+          <button id="regresar" class="regresar"></button>
+          <h3 class="logInTitle">Su contraseña ha sid confirmada exitosamente</h3>
+        </div>
+        <button type="submit" class="logInButton">Continuar</button>
+      </div>
+      <div class="bienvenido">
+        <h2 id="tituloDeBienvenida">Le damos la bienvenida!</h2>
+        <img src="" alt="Logo de la webApp">
+        <button type="submit" class="logInButton">Iniciar</button>
+      </div>
+    </div>
+    <!-- End LogIn container-->
+    
   <script src="main.js"></script>
 </body>
 
