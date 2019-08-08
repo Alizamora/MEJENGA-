@@ -15,88 +15,102 @@
 
     <!--LogIn container-->
     <div class="logIn">
-      <div class="inicio">
+      <div class="inicio padding">
         <img class="logo" src="./images/svg/Logo.svg" alt="logo de la web app">
         <button id="btnCreeSuCuenta" class="btnCreeSuCuenta">Cree su cuenta</button>
         <div class="accederCon">
           <span class="textAccederCon">o</span>
           <span class="textAccederCon">Acceder con</span>
-          <button id="btnFacebook"></button>
-          <button id="btnGoogle"></button>
+          <button id="btnFacebook" class="btnLogIn">
+            <img src="./images/svg/facebook.svg" alt="Icono de facebook">
+          </button>
+          <button id="btnGoogle" class="btnLogIn">
+            <img src="./images/svg/google.svg" alt="icono de google">
+          </button>
         </div>
         <button id="bntYaTengoCuenta" class="bntYaTengoCuenta">Ya tengo cuenta!</button>
       </div>
 
-      <div class="crearCuenta">
+      <div class="crearCuenta padding">
         <div class="headerLogIn">
-          <button id="regresar" class="regresar"></button>
+          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
           <h3 class="logInTitle">Crear cuenta</h3>
         </div>
-        <form class="formCrearCuenta" action="https://mejenga-api.herokuapp.com/v1" method="post">
+        <form id="formCrearCuenta" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" method="post">
           <label for="userName"></label>
           <input type="text" id="userName" name="userName" placeholder="Nombre de usuario" required>
           <label for="email"></label>
           <input autocomplete="username" type="email" name="email" id="email" placeholder="Correo" required>
           <label for="password"></label>
-          <input autocomplete="current-password" type="password" name="password" id="password" placeholder="Contraseña" required>
+          <input autocomplete="current-password" type="password" name="password" id="password" placeholder="Contraseña"
+            required>
           <button type="submit" class="btnCrearCuenta" id="btnCrearCuenta">Crear</button>
           <div class="accederCon">
             <span class="textAccederCon">o</span>
             <span class="textAccederCon">Acceder con</span>
-            <button id="btnFacebook"></button>
-            <button id="btnGoogle"></button>
+            <button id="btnFacebook" class="btnLogIn">
+              <img src="./images/svg/facebook.svg" alt="Icono de facebook">
+            </button>
+            <button id="btnGoogle" class="btnLogIn">
+              <img src="./images/svg/google.svg" alt="icono de google">
+            </button>
           </div>
         </form>
       </div>
 
-      <div class="acceder">
+      <div class="acceder padding">
         <div class="headerLogIn">
-          <button id="regresar" class="regresar"></button>
+          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
           <h3 class="logInTitle">Acceder</h3>
         </div>
-        <form action="https://mejenga-api.herokuapp.com/v1/login" method="get">
+        <form id="formAcceder" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1/login" method="get">
           <label for="accederCorreo" class="accederCorreo"></label>
           <input autocomplete="username" type="text" id="accederCorreo" class="accederCorreo" required>
           <label for="accederContraseña"></label>
-          <input autocomplete="current-password" type="password" id="accederContraseña" class="accederContraseña" required>
+          <input autocomplete="current-password" type="password" id="accederContraseña" class="accederContraseña"
+            required>
           <button type="submit" class="logInButton">Acceder</button>
         </form>
-        <div class="accederCon">
+        <div class="accederCon padding">
           <span class="textAccederCon">o</span>
           <span class="textAccederCon">Acceder con</span>
-          <button id="btnFacebook"></button>
-          <button id="btnGoogle"></button>
+          <button id="btnFacebook" class="btnLogIn">
+            <img src="./images/svg/facebook.svg" alt="Icono de facebook">
+          </button>
+          <button id="btnGoogle" class="btnLogIn">
+            <img src="./images/svg/google.svg" alt="icono de google">
+          </button>
         </div>
         <button id="AccederCrearCuenta" class="AccederCrearCuenta">Crear cuenta</button>
       </div>
 
-      <div class="olvidoSuContraseña">
+      <div class="olvidoSuContraseña padding">
         <div class="headerLogIn">
-          <button id="regresar" class="regresar"></button>
+          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
           <h3 class="logInTitle">¿Olvidó su contraseña?</h3>
         </div>
         <p class="logInDescripcion">¿Desea enviar un código de verificación al correo ingresado?</p>
         <button type="submit" class="logInButton">Enviar</button>
       </div>
 
-      <div class="codigoDeVerificacion">
+      <div class="codigoDeVerificacion padding">
         <div class="headerLogIn">
-          <button id="regresar" class="regresar"></button>
+          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
           <h3 class="logInTitle">Se envió exitosamente el código de verificación</h3>
         </div>
-        <form action="">
+        <form id="formCodigo" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" >
           <label for="codigo"></label>
           <input type="text" id="codigo" required></input>
           <button type="submit" class="logInButton">Verificar</button>
         </form>
       </div>
 
-      <div class="nuevaContraseña">
+      <div class="nuevaContraseña padding">
         <div class="headerLogIn">
-          <button id="regresar" class="regresar"></button>
+          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
           <h3 class="logInTitle">Ingrese una nueva contraseña</h3>
         </div>
-        <form action="">
+        <form id="formNuevaContraseña" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1">
           <label for="nuevaContraseña"></label>
           <input autocomplete="new-password" type="password" id="nuevaContraseña" required></input>
           <label for="verificacion"></label>
@@ -104,14 +118,14 @@
           <button type="submit" class="logInButton">Verificar</button>
         </form>
       </div>
-      <div class="contraseñaConfimada">
+      <div class="contraseñaConfimada padding">
         <div class="headerLogIn">
-          <button id="regresar" class="regresar"></button>
+          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
           <h3 class="logInTitle">Su contraseña ha sid confirmada exitosamente</h3>
         </div>
         <button type="submit" class="logInButton">Continuar</button>
       </div>
-      <div class="bienvenido">
+      <div class="bienvenido padding">
         <h2 id="tituloDeBienvenida">Le damos la bienvenida!</h2>
         <img src="./images/svg/Logo.svg" alt="Logo de la web app">
         <button type="submit" class="logInButton">Iniciar</button>

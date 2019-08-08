@@ -4,10 +4,12 @@
   height: 100vh;
   text-align: center;
   position: relative;
+  padding: 30px;
 }
 
 .logo {
   display: block;
+  margin: 0 auto;
 }
 
 .btnCreeSuCuenta {
@@ -19,16 +21,14 @@
   border: none;
   color: white;
   font-size: 14px;
-  position: absolute;
-  left: 72px;
-  top: 228px;
+  margin-top: 50px;
 }
 
 .accederCon {
   height: 116px;
   width: 147px;
   margin: 0 auto;
-	padding-top: 307px;
+	padding-top: 50px;
 	text-align: center;
 }
 
@@ -52,14 +52,33 @@
   font-weight: 500;
 }
 
-#btnFacebook {
-  //background-image: url('../images/svg/facebook.svg');
-  height: 30px;
-  width: 30px;
+.btnLogIn{
+  background: transparent;
+  border: none;
 }
 
-#btnGoogle {
-  //background-image: url('../../images/svg/google.svg');
-  height: 30px;
-  width: 30px;
+.padding{
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.logInTitle{
+  color: white;
+  margin: 0 auto;
+}
+
+.headerLogIn{
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  margin-bottom: 50px;
+}
+
+.accederCon{
+  display: block;
+  margin: 0 auto;
+}
+
+.formLogIn{
+  display: grid;
+  grid-gap: 10px;
 }
