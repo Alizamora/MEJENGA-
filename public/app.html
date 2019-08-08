@@ -50,7 +50,7 @@
 		<!--Editar Perfil-->
 		<div class="editarPerfil">
 			<header>
-				<button id="regresar" class="regresar"></button>
+				<button id="regresarEditar" class="regresar"></button>
 				<h3 class="perfilTitle">Editar perfil</h3>
 			</header>
 			<div class="EditPerfilContainer">
@@ -100,25 +100,9 @@
 						</label> -->
 					</div>
 					<label for="Horas disponibles">
-						<label for="de" class="horasDisponibles">De
-							<!-- <select name="" id="">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
-									</select>
-									<select name="" id="">
-										<option value="am">am</option>
-										<option value="pm">pm</option>
-									</select> -->
+						<label for="de" class="horasDisponibles">
+							<span>De</span>
+							<span>Hasta</span>
 						</label>
 						<label for="Hasta" class="horasDisponibles"></label>
 					</label>
@@ -132,13 +116,51 @@
 		<!--User Profile-->
 		<div class="perfilDeUsuario">
 			<header>
-				<button id="regresar" class="regresar"></button>
+				<button id="regresarPerfil" class="regresar"></button>
 				<h3 class="perfilName">Nombre de Usuario</h3>
 				<span id="posicionDeljugador">Delantera</span>
 				<button id="perfilMenu">
 					<img src="" alt="icono del menu del perfil del usuario">
 				</button>
-				<div class="perfilMenuContainer"></div>
+				<div class="perfilMenuContainer">
+					<header>
+						<button id="regresarPerfilMenu" class="regresar"></button>
+						<h3>Ajustes de perfil</h3>
+						<button id="btnEditarPerfil">
+							<img src="" alt="icono de editar perfil">
+							<span>Editar perfil</span>
+						</button>
+					</header>
+					<div class="permisosDePerfil">
+						<h3>Permisos de perfil</h3>
+						<ul>
+							<li>
+								<label for="mostrarmeDisponible">
+									<span>Mostrarme Disponible</span>
+									<input type="checkbox" name="available" id="mostrarmeDisponible">
+								</label>
+							</li>
+							<li>
+								<label for="permitirMensajes">
+									<span>Permitir Mensajes</span>
+									<input type="checkbox" name="permitirMensajes" id="permitirMensajes">
+								</label>
+							</li>
+							<li>
+								<label for="permitirCalificacion">
+									<span>Permitir que me califiquen</span>
+									<input type="checkbox" name="PermitirCalificacion" id="PermitirCalificacion">
+								</label>
+							</li>
+							<li>
+								<label for="mostrarMisEquipos">
+									<span>Mostrar los equipos en los que estoy</span>
+									<input type="checkbox" name="mostrarMisEquipos" id="mostrarMisEquipos">
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</header>
 			<button class="likes">
 				<img src="" alt="Icono de corazon, que representa los likes del jugador">
@@ -153,7 +175,7 @@
 				<span class="mensajeDescription">Enviar mensaje</span>
 			</button>
 
-			<!--informaci[on basica del ususario-->
+			<!--información básica del ususario-->
 			<div class="infoUsuario">
 				<span class="perfilText" id="miGenero">Mujer</span>
 				<span id="miNumeroDeCamisa">#4</span>
@@ -166,29 +188,113 @@
 			<!--Partidos jugados-->
 			<div id="partidosJugados">
 				<h4 class="perfilSecundaryTitle">Partidos jugados</h4>
-				<span id="cantidadPartidos" class="perfilText">13 mejengas</span>
+				<span id="cantidadPartidos" class="perfilText">
+
+					<span></span>
+					mejengas
+				</span>
 			</div>
 			<!--End Partidos jugados-->
 			<span class="line"></span>
 			<!--Informacion Extra-->
 			<div class="extraInfoUser">
 				<div class="disponibilidad">
-						<h4 class="perfilSecundaryTitle">Disponibilidad</h4>                         
+					<h4 class="perfilSecundaryTitle">Disponibilidad</h4>
 					<span class="perfilText">Días disponibles</span>
 					<div class="diasDisponibles"></div>
 					<span class="perfilText">Horas disponibles</span>
 					<p class="perfilText">De <span class=""></span>a<span class=""></span></p>
 				</div>
 				<div class="misEquipos">
-						<h4 class="perfilSecundaryTitle">Equipos a los que pertenezco</h4>
-						<ul class="listaDeEquipos">
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
+					<h4 class="perfilSecundaryTitle">Equipos a los que pertenezco</h4>
+					<ul class="listaDeEquipos">
+						<!-- <li>
+
+						</li>
+							<li>
+
+							</li>
+							<li>
+
+							</li> -->
+					</ul>
 				</div>
 				<span class="line"></span>
 				<button id="reclutarJugador">Reclutar jugador</button>
+				<div class="calificaAlJugador">
+					<h4 class="perfilSecundaryTitle">Califica al jugador(a)</h4>
+					<ul>
+						<li class="stars"><button></button>
+						</li>
+						<li class="stars"><button></button>
+						</li>
+						<li class="stars"><button></button>
+						</li>
+						<li class="stars"><button></button>
+						</li>
+						<li class="stars"><button></button>
+						</li>
+					</ul>
+				</div>
+				<div class="calificaciones">
+					<div class="cantidadDeCalificaciones">
+
+						<span></span>
+
+						<ul>
+							<li class="stars">
+
+							</li>
+							<li class="stars">
+
+							</li>
+							<li class="stars">
+
+							</li>
+							<li class="stars">
+
+							</li>
+							<li class="stars">
+
+							</li>
+						</ul>
+					</div>
+					<div class="graficaDeCalificaciones">
+						<ul>
+							<li>
+								<span></span>
+								<b></b>
+							</li>
+							<li>
+								<span></span>
+								<b></b>
+							</li>
+							<li>
+								<span></span>
+								<b></b>
+							</li>
+							<li>
+								<span></span>
+								<b></b>
+							</li>
+							<li>
+								<span></span>
+								<b></b>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="otrasOpciones">
+				<h4 class="perfilSecundaryTitle"></h4>
+				<div class="agregarAmigos">
+					<h5>Agregar Amigos</h5>
+					<button></button>
+				</div>
+				<div class="marcarFavorito">
+					<h5>Marcar como favorito</h5>
+					<button></button>
+				</div>
 			</div>
 		</div>
 		<!--End user profile-->
@@ -200,7 +306,7 @@
 			<p>Las unicas opciones que están habilitadas son:</p>
 			<ul>
 				<li>Editar perfil</li>
-				<li>Crear equipos</li>
+				<!-- <li>Crear equipos</li> -->
 			</ul>
 		</div>
 
@@ -208,11 +314,16 @@
 		<footer>
 			<nav>
 				<ul>
-					<li id="btnBuscar"><a href="#"></a></li>
-					<li id="btnPublicar"><a href="#"></a></li>
-					<li id="btnMejenga"><a href="#"></a></li>
-					<li id="btnEquipos"><a href="#"></a></li>
-					<li id="btnCancha"><a href="#"></a></li>
+					<li id="btnBuscar"><a href="#"></a>
+					</li>
+					<li id="btnPublicar"><a href="#"></a>
+					</li>
+					<li id="btnMejenga"><a href="#"></a>
+					</li>
+					<li id="btnEquipos"><a href="#"></a>
+					</li>
+					<li id="btnCancha"><a href="#"></a>
+					</li>
 				</ul>
 			</nav>
 		</footer>
