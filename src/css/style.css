@@ -141,6 +141,20 @@ p {
   margin-bottom: 50px;
 }
 
+.accederCon {
+  display: block;
+  margin: 0 auto;
+}
+
+.formLogIn {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.btnPadding {
+  padding-bottom: 50%;
+}
+
 .crearCuenta {
   height: 100vh;
 }
