@@ -71,6 +71,7 @@ p {
 .inicio {
   height: 100vh;
   text-align: center;
+  position: relative;
 }
 
 .logo {
@@ -86,11 +87,17 @@ p {
   border: none;
   color: white;
   font-size: 14px;
+  position: absolute;
+  left: 72px;
+  top: 228px;
 }
 
 .accederCon {
   height: 116px;
   width: 147px;
+  margin: 0 auto;
+  padding-top: 307px;
+  text-align: center;
 }
 
 .textAccederCon {
@@ -98,6 +105,19 @@ p {
   line-height: 21px;
   color: white;
   display: block;
+  padding-bottom: 30px;
+}
+
+.bntYaTengoCuenta {
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+  font-size: 13px;
+  text-decoration-line: underline;
+  color: white;
+  background: transparent;
+  border: none;
+  font-weight: 500;
 }
 
 #btnFacebook {
@@ -108,6 +128,10 @@ p {
 #btnGoogle {
   height: 30px;
   width: 30px;
+}
+
+.crearCuenta {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
