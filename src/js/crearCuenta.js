@@ -1,7 +1,7 @@
 export default () => {
   const crearCuenta = document.querySelector('.crearCuenta');
   const btnCrearCuenta = document.getElementById('btnCrearCuenta');
-  const form = crearCuenta.querySelector('form');
+  const form = document.querySelector('.crearCuenta form');
 
   if (crearCuenta) {
     btnCrearCuenta.addEventListener('click', (e) => {
@@ -19,11 +19,12 @@ export default () => {
       })
         .then((response) => {
           const isOk = response.status === 200;
+          const action = `${form.getAttribute('action')}/login?${inputs}`;
           if (isOk) {
-            fetch(`${form.getAttribute('action')}/login?${inputs}`)
+            fetch(action)
               .then(data => data.json())
               .then((json) => {
-                localStorage.setItem('_id', JSON.stringify(json.data));
+                localStorage.setItem('user', JSON.stringify(json.data));
                 window.location.replace('./app.html');
               });
           } else {
