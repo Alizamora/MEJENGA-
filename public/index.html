@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eS">
 
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <!--LogIn container-->
     <div class="logIn">
       <div class="inicio">
-        <img class="logo" src="../src/images/svg/Logo.svg" alt="logo de la webApp">
+        <img class="logo" src="./images/svg/Logo.svg" alt="logo de la web app">
         <button id="btnCreeSuCuenta" class="btnCreeSuCuenta">Cree su cuenta</button>
         <div class="accederCon">
           <span class="textAccederCon">o</span>
@@ -32,7 +32,7 @@
           <button id="regresar" class="regresar"></button>
           <h3 class="logInTitle">Crear cuenta</h3>
         </div>
-        <form class="formCrearCuenta" action="https://mejenga-api.herokuapp.com/api/v1/users" method="POST">
+        <form class="formCrearCuenta" action="https://mejenga-api.herokuapp.com/v1" method="post">
           <label for="userName"></label>
           <input type="text" id="userName" name="userName" placeholder="Nombre de usuario" required>
           <label for="email"></label>
@@ -54,7 +54,7 @@
           <button id="regresar" class="regresar"></button>
           <h3 class="logInTitle">Acceder</h3>
         </div>
-        <form action="https://mejenga-api.herokuapp.com/api/v1/login" method="GET">
+        <form action="https://mejenga-api.herokuapp.com/v1/login" method="get">
           <label for="accederCorreo" class="accederCorreo"></label>
           <input autocomplete="username" type="text" id="accederCorreo" class="accederCorreo" required>
           <label for="accederContraseña"></label>
@@ -113,7 +113,7 @@
       </div>
       <div class="bienvenido">
         <h2 id="tituloDeBienvenida">Le damos la bienvenida!</h2>
-        <img src="" alt="Logo de la webApp">
+        <img src="./images/svg/Logo.svg" alt="Logo de la web app">
         <button type="submit" class="logInButton">Iniciar</button>
       </div>
     </div>
