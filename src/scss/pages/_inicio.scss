@@ -28,8 +28,8 @@
   height: 116px;
   width: 147px;
   margin: 0 auto;
-	padding-top: 50px;
-	text-align: center;
+  padding-top: 50px;
+  text-align: center;
 }
 
 .textAccederCon {
@@ -52,37 +52,51 @@
   font-weight: 500;
 }
 
-.btnLogIn{
+.btnLogIn {
   background: transparent;
   border: none;
 }
 
-.padding{
+.padding {
   padding: 30px;
   margin: 0 auto;
 }
 
-.logInTitle{
+.logInTitle {
   color: white;
   margin: 0 auto;
 }
 
-.headerLogIn{
+.headerLogIn {
   display: grid;
   grid-template-columns: 10% 1fr;
   margin-bottom: 50px;
 }
 
-.accederCon{
+.accederCon {
   display: block;
   margin: 0 auto;
 }
 
-.formLogIn{
+.formLogIn {
   display: grid;
   grid-gap: 10px;
 }
 
-.btnPadding{
+.btnPadding {
   padding-bottom: 50%;
+}
+
+.inputStyle {
+  background: rgba(255, 255, 255, 0.51);
+  border-radius: 10px;
+  border: none;
+  width: 255px;
+  height: 45px;
+  &::placeholder {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
