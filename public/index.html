@@ -17,7 +17,9 @@
     <div class="logIn">
       <div id="screen0" class="inicio padding">
         <img class="logo" src="./images/svg/Logo.svg" alt="logo de la web app">
-        <button id="btnCreeSuCuenta" class="btnCreeSuCuenta">Cree su cuenta</button>
+        <button id="btnCreeSuCuenta" class="btnCreeSuCuenta">
+          <a href="#screen1">Cree su cuenta</a>
+        </button>
         <div class="accederCon">
           <span class="textAccederCon">o</span>
           <span class="textAccederCon">Acceder con</span>
@@ -28,12 +30,16 @@
             <img src="./images/svg/google.svg" alt="icono de google">
           </button>
         </div>
-        <button id="bntYaTengoCuenta" class="bntYaTengoCuenta">Ya tengo cuenta!</button>
+        <a href="#screen2" id="bntYaTengoCuenta" class="bntYaTengoCuenta">Ya tengo cuenta!</a>
       </div>
 
       <div id="screen1" class="crearCuenta padding">
         <div class="headerLogIn">
-          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
+          <button class="btnLogIn">
+            <a href="#screen0">
+              <img src="./images/svg/back.svg" alt="icono del boton para regresar">
+            </a>
+          </button>
           <h3 class="logInTitle">Crear cuenta</h3>
         </div>
         <form id="formCrearCuenta" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" method="post">
@@ -44,6 +50,7 @@
           <label for="password"></label>
           <input autocomplete="current-password" type="password" name="password" id="password" placeholder="Contraseña"
             required>
+          <a href="#screen2" id="bntYaTengoCuenta" class="bntYaTengoCuenta">¿Ya tiene cuenta?</a>
           <button type="submit" class="btnCrearCuenta" id="btnCrearCuenta">Crear</button>
           <div class="accederCon">
             <span class="textAccederCon">o</span>
@@ -60,14 +67,20 @@
 
       <div id="screen2" class="acceder padding">
         <div class="headerLogIn">
-          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
+          <button class="btnLogIn">
+            <a href="#screen1">
+              <img src="./images/svg/back.svg" alt="icono del boton para regresar">
+            </a>
+          </button>
           <h3 class="logInTitle">Acceder</h3>
         </div>
         <form id="formAcceder" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" method="get">
           <label for="userName" class="userName"></label>
           <input name="userName" autocomplete="username" type="text" id="userName" class="userName" required>
           <label for="accederContraseña"></label>
-          <input name="password" autocomplete="current-password" type="password" id="accederContraseña" class="accederContraseña" required>
+          <input name="password" autocomplete="current-password" type="password" id="accederContraseña"
+            class="accederContraseña" required>
+          <a href="#screen3">olvidó su contraseña?</a>
           <button type="submit" class="logInButton">Acceder</button>
         </form>
         <div class="accederCon padding">
@@ -80,12 +93,16 @@
             <img src="./images/svg/google.svg" alt="icono de google">
           </button>
         </div>
-        <button id="AccederCrearCuenta" class="AccederCrearCuenta">Crear cuenta</button>
+        <a href="#screen1">Crear cuenta</a>
       </div>
 
       <div id="screen3" class="olvidoSuContraseña padding">
         <div class="headerLogIn">
-          <button class="btnLogIn btnPadding"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
+          <button class="btnLogIn">
+            <a href="#screen2">
+              <img src="./images/svg/back.svg" alt="icono del boton para regresar">
+            </a>
+          </button>
           <h3 class="logInTitle">¿Olvidó su contraseña?</h3>
         </div>
         <p class="logInDescripcion">¿Desea enviar un código de verificación al correo ingresado?</p>
@@ -94,10 +111,14 @@
 
       <div id="screen4" class="codigoDeVerificacion padding">
         <div class="headerLogIn">
-          <button class="btnLogIn btnPadding"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
-          <h3 class="logInTitle">Se envió exitosamente el código de verificación</h3>
+            <button class="btnLogIn">
+              <a href="#screen3">
+                  <img src="./images/svg/back.svg" alt="icono del boton para regresar">
+              </a>
+            </button>
+            <h3 class="logInTitle">Se envió exitosamente el código de verificación</h3>
         </div>
-        <form id="formCodigo" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" >
+        <form id="formCodigo" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1">
           <label for="codigo"></label>
           <input type="text" id="codigo" name="_id" required></input>
           <button type="submit" class="logInButton">Verificar</button>
@@ -106,7 +127,11 @@
 
       <div id="screen5" class="nuevaContraseña padding">
         <div class="headerLogIn">
-          <button class="btnLogIn btnPadding"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
+          <button class="btnLogIn">
+            <a href="#screen4">
+              <img src="./images/svg/back.svg" alt="icono del boton para regresar">
+            </a>
+          </button>
           <h3 class="logInTitle">Ingrese una nueva contraseña</h3>
         </div>
         <form id="formNuevaContraseña" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1">
@@ -120,7 +145,11 @@
 
       <div id="screen6" class="contraseñaConfimada padding">
         <div class="headerLogIn btnPadding">
-          <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
+          <button class="btnLogIn">
+            <a href="#screen5">
+              <img src="./images/svg/back.svg" alt="icono del boton para regresar">
+            </a>
+          </button>
           <h3 class="logInTitle">Su contraseña ha sido confirmada exitosamente</h3>
         </div>
         <button type="submit" class="logInButton">Continuar</button>
