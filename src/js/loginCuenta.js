@@ -1,20 +1,28 @@
+import login from './accessUtilities';
+
 export default () => {
-  const accederCorreo = document.getElementById('accederCorreo');
-  const accederContraseña = document.getElementById('accederContraseña');
-
-  if (accederCorreo) {
-    accederCorreo.name = 'email';
-    accederContraseña.name = 'password';
-
-    const inputs = [accederCorreo, accederContraseña]
-      .map(input => `${input.name}=${input.value}`).join('&');
-    const form = accederCorreo.parentElement();
+  const form = document.getElementById('formAcceder');
+  if (form) {
+    let inputs = [...form.querySelectorAll('input')];
+    let action = `${form.getAttribute('action')}/login?`;
     const submit = form.querySelector('button[type="submit"]');
-    const action = `${form.getAttribute('action')}/login?${inputs}`;
+    const labelError = form.querySelector('label[for="crearUserName"]');
 
     submit.addEventListener('click', (e) => {
       e.preventDefault();
-      fetch(action);
+      inputs = inputs
+        .map(input => `${input.name}=${input.value}`).join('&');
+      action += inputs;
+
+      fetch(action)
+        .then(response => response.json())
+        .then((json) => {
+          if (!json.error) {
+            login(json);
+          } else {
+            labelError.innerText = 'El nombre de usuario y/o contraseña no son correctos';
+          }
+        });
     });
   }
 };
