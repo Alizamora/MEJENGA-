@@ -38,11 +38,12 @@
         </div>
         <form id="formCrearCuenta" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" method="post">
           <label for="userName"></label>
-          <input type="text" id="userName" name="userName" placeholder="Nombre de usuario" required>
+          <input type="text" id="userName" class="
+          inputStyle" name="userName" placeholder="Nombre de usuario" required>
           <label for="email"></label>
-          <input autocomplete="username" type="email" name="email" id="email" placeholder="Correo" required>
+          <input autocomplete="username" type="email" name="email" id="email" class="inputStyle" placeholder="Correo" required>
           <label for="password"></label>
-          <input autocomplete="current-password" type="password" name="password" id="password" placeholder="Contraseña"
+          <input autocomplete="current-password" type="password" name="password" id="password" class="inputStyle" placeholder="Contraseña"
             required>
           <button type="submit" class="btnCrearCuenta" id="btnCrearCuenta">Crear</button>
           <div class="accederCon">
@@ -65,9 +66,9 @@
         </div>
         <form id="formAcceder" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1/login" method="get">
           <label for="accederCorreo" class="accederCorreo"></label>
-          <input autocomplete="username" type="text" id="accederCorreo" class="accederCorreo" required>
+          <input autocomplete="username" type="text" id="accederCorreo" class="inputStyle" placeholder="Correo" required>
           <label for="accederContraseña"></label>
-          <input autocomplete="current-password" type="password" id="accederContraseña" class="accederContraseña"
+          <input autocomplete="current-password" type="password" id="accederContraseña" class="inputStyle" placeholder="Contraseña"
             required>
           <button type="submit" class="logInButton">Acceder</button>
         </form>
