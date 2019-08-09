@@ -45,18 +45,18 @@
           <label for="password"></label>
           <input autocomplete="current-password" type="password" name="password" id="password" class="inputStyle" placeholder="Contraseña"
             required>
-          <button type="submit" class="btnCrearCuenta" id="btnCrearCuenta">Crear</button>
-          <div class="accederCon">
-            <span class="textAccederCon">o</span>
-            <span class="textAccederCon">Acceder con</span>
-            <button id="btnFacebook" class="btnLogIn">
-              <img src="./images/svg/facebook.svg" alt="Icono de facebook">
-            </button>
-            <button id="btnGoogle" class="btnLogIn">
-              <img src="./images/svg/google.svg" alt="icono de google">
-            </button>
-          </div>
+          <button type="submit"id="btnCrearCuenta" class="btnStandar" >Crear</button>
         </form>
+        <div class="accederCon">
+          <span class="textAccederCon">o</span>
+          <span class="textAccederCon">Acceder con</span>
+          <button id="btnFacebook" class="btnLogIn">
+            <img src="./images/svg/facebook.svg" alt="Icono de facebook">
+          </button>
+          <button id="btnGoogle" class="btnLogIn">
+            <img src="./images/svg/google.svg" alt="icono de google">
+          </button>
+        </div>
       </div>
 
       <div class="acceder padding">
@@ -70,7 +70,7 @@
           <label for="accederContraseña"></label>
           <input autocomplete="current-password" type="password" id="accederContraseña" class="inputStyle" placeholder="Contraseña"
             required>
-          <button type="submit" class="logInButton">Acceder</button>
+          <button type="submit" id="btnAcceder" class="btnStandar">Acceder</button>
         </form>
         <div class="accederCon padding">
           <span class="textAccederCon">o</span>
@@ -82,7 +82,7 @@
             <img src="./images/svg/google.svg" alt="icono de google">
           </button>
         </div>
-        <button id="AccederCrearCuenta" class="AccederCrearCuenta">Crear cuenta</button>
+        <button id="AccederCrearCuenta" class="bntYaTengoCuenta">Crear cuenta</button>
       </div>
 
       <div class="olvidoSuContraseña padding">
@@ -91,7 +91,7 @@
           <h3 class="logInTitle">¿Olvidó su contraseña?</h3>
         </div>
         <p class="logInDescripcion">¿Desea enviar un código de verificación al correo ingresado?</p>
-        <button type="submit" class="logInButton">Enviar</button>
+        <button type="submit" id="logInButton" class="btnStandar">Enviar</button>
       </div>
 
       <div class="codigoDeVerificacion padding">
@@ -101,8 +101,8 @@
         </div>
         <form id="formCodigo" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" >
           <label for="codigo"></label>
-          <input type="text" id="codigo" required></input>
-          <button type="submit" class="logInButton">Verificar</button>
+          <input type="text" id="codigo" class="btnErrorStyle" placeholder="Código" required></input>
+          <button type="submit" id="btnVerificarCodigo" class="btnStandar">Verificar</button>
         </form>
       </div>
 
@@ -113,23 +113,25 @@
         </div>
         <form id="formNuevaContraseña" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1">
           <label for="nuevaContraseña"></label>
-          <input autocomplete="new-password" type="password" id="nuevaContraseña" required></input>
+          <input autocomplete="new-password" type="password" id="nuevaContraseña" class="btnErrorStyle" placeholder="Nueva contraseña" required></input>
           <label for="verificacion"></label>
-          <input autocomplete="new-password" type=password id="verificacion" required></input>
-          <button type="submit" class="logInButton">Verificar</button>
+          <input autocomplete="new-password" type=password id="verificacion" class="btnErrorStyle" placeholder="Contraseña/verificación" required></input>
+          <button type="submit" btn="btnNuevaContarse;a" class="btnStandar">Verificar</button>
         </form>
       </div>
+
+
       <div class="contraseñaConfimada padding">
         <div class="headerLogIn btnPadding">
           <button class="btnLogIn"><img src="./images/svg/back.svg" alt="icono del boton para regresar"></button>
           <h3 class="logInTitle">Su contraseña ha sid confirmada exitosamente</h3>
         </div>
-        <button type="submit" class="logInButton">Continuar</button>
+        <button type="submit" id="bntContinuar" class="btnStandar">Continuar</button>
       </div>
       <div class="bienvenido padding">
         <h2 id="tituloDeBienvenida">Le damos la bienvenida!</h2>
         <img src="./images/svg/Logo.svg" alt="Logo de la web app">
-        <button type="submit" class="logInButton">Iniciar</button>
+        <button type="submit" class="btnCreeSuCuenta">Iniciar</button>
       </div>
     </div>
     <!-- End LogIn container-->
