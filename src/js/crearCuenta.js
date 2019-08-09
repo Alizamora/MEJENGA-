@@ -1,16 +1,19 @@
+import login from './accessUtilities';
+
 export default () => {
   const crearCuenta = document.querySelector('.crearCuenta');
   const btnCrearCuenta = document.getElementById('btnCrearCuenta');
-  const form = crearCuenta.querySelector('form');
+  const form = document.getElementById('formCrearCuenta');
 
   if (crearCuenta) {
     btnCrearCuenta.addEventListener('click', (e) => {
       e.preventDefault();
-      let inputs = [...crearCuenta.querySelectorAll('input')];
+      const inputs = [...crearCuenta.querySelectorAll('input')]
+        .map(input => `${input.name}=${input.value}`).join('&');
+      const actionLogin = `${form.getAttribute('action')}/login?${inputs}`;
+      const actionUsers = `${form.getAttribute('action')}/users`;
 
-      inputs = inputs.map(input => `${input.name}=${input.value}`).join('&');
-
-      fetch(`${form.getAttribute('action')}/users`, {
+      fetch(actionUsers, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -19,16 +22,16 @@ export default () => {
       })
         .then((response) => {
           const isOk = response.status === 200;
+          const errorLabel = form.children[0];
           if (isOk) {
-            fetch(`${form.getAttribute('action')}/login?${inputs}`)
+            errorLabel.innerText = '';
+            fetch(actionLogin)
               .then(data => data.json())
               .then((json) => {
-                localStorage.setItem('_id', JSON.stringify(json.data));
-                window.location.replace('./app.html');
+                login(json);
               });
           } else {
-            const a = 1;
-            console.log(a);
+            errorLabel.innerText = 'El nombre de usuario ya está en uso';
             // do something to show that there is already a user with that name
           }
         });
