@@ -15,6 +15,8 @@
 
     <!--LogIn container-->
     <div class="logIn">
+
+      <!--Screen#0 - Inicio-->
       <div id="screen0" class="inicio padding">
         <img class="logo" src="./images/svg/Logo.svg" alt="logo de la web app">
         <button id="btnCreeSuCuenta" class="btnCreeSuCuenta">
@@ -33,6 +35,7 @@
         <a href="#screen2" id="bntYaTengoCuenta" class="bntYaTengoCuenta">Ya tengo cuenta!</a>
       </div>
 
+      <!--Screen#1 - Crear cuenta-->
       <div id="screen1" class="crearCuenta padding">
         <div class="headerLogIn">
           <button class="btnLogIn">
@@ -44,28 +47,15 @@
         </div>
         <form id="formCrearCuenta" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" method="post">
           <label for="crearUserName"></label>
-          <input type="text" id="crearUserName" name="userName" placeholder="Nombre de usuario" required>
-          <label for="email"></label>
-          <input autocomplete="username" type="email" name="email" id="email" class="inputStyle" placeholder="Correo" required>
-          <label for="password"></label>
-          <input autocomplete="current-password" type="password" name="password" id="password" class="inputStyle" placeholder="Contraseña"
+          <input type="text" id="crearUserName" name="userName" class="inputStyle" placeholder="Nombre de usuario"
             required>
-<<<<<<< HEAD
-          <button type="submit"id="btnCrearCuenta" class="btnStandar" >Crear</button>
-=======
-          <a href="#screen2" id="bntYaTengoCuenta" class="bntYaTengoCuenta">¿Ya tiene cuenta?</a>
-          <button type="submit" class="btnCrearCuenta" id="btnCrearCuenta">Crear</button>
-          <div class="accederCon">
-            <span class="textAccederCon">o</span>
-            <span class="textAccederCon">Acceder con</span>
-            <button id="btnFacebook" class="btnLogIn">
-              <img src="./images/svg/facebook.svg" alt="Icono de facebook">
-            </button>
-            <button id="btnGoogle" class="btnLogIn">
-              <img src="./images/svg/google.svg" alt="icono de google">
-            </button>
-          </div>
->>>>>>> bddfcd1e27e3a2e24cb341ac157340d548263ce5
+          <label for="email"></label>
+          <input autocomplete="username" type="email" name="email" id="email" class="inputStyle" placeholder="Correo"
+            required>
+          <label for="password"></label>
+          <input autocomplete="current-password" type="password" name="password" id="password" class="inputStyle"
+            placeholder="Contraseña" required>
+          <button type="submit" class="btnStandar" id="btnCrearCuenta">Crear</button>
         </form>
         <div class="accederCon">
           <span class="textAccederCon">o</span>
@@ -77,8 +67,10 @@
             <img src="./images/svg/google.svg" alt="icono de google">
           </button>
         </div>
+        <a href="#screen2" id="bntYaTengoCuenta" class="bntYaTengoCuenta">¿Ya tiene cuenta?</a>
       </div>
 
+      <!--Screen#2 - Acceder-->
       <div id="screen2" class="acceder padding">
         <div class="headerLogIn">
           <button class="btnLogIn">
@@ -90,18 +82,12 @@
         </div>
         <form id="formAcceder" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1" method="get">
           <label for="userName" class="userName"></label>
-          <input name="userName" autocomplete="username" type="text" id="userName" class="userName" required>
+          <input name="userName" autocomplete="username" type="text" id="userName" class="inputStyle" placeholder="Nombre de usuario" required>
           <label for="accederContraseña"></label>
-<<<<<<< HEAD
-          <input autocomplete="current-password" type="password" id="accederContraseña" class="inputStyle" placeholder="Contraseña"
-            required>
-          <button type="submit" id="btnAcceder" class="btnStandar">Acceder</button>
-=======
           <input name="password" autocomplete="current-password" type="password" id="accederContraseña"
-            class="accederContraseña" required>
-          <a href="#screen3">olvidó su contraseña?</a>
-          <button type="submit" class="logInButton">Acceder</button>
->>>>>>> bddfcd1e27e3a2e24cb341ac157340d548263ce5
+            class="inputStyle" placeholder="Contraseña" required>
+          <a href="#screen3" class="bntYaTengoCuenta">olvidó su contraseña?</a>
+          <button type="submit" class="btnStandar">Acceder</button>
         </form>
         <div class="accederCon padding">
           <span class="textAccederCon">o</span>
@@ -113,13 +99,10 @@
             <img src="./images/svg/google.svg" alt="icono de google">
           </button>
         </div>
-<<<<<<< HEAD
-        <button id="AccederCrearCuenta" class="bntYaTengoCuenta">Crear cuenta</button>
-=======
-        <a href="#screen1">Crear cuenta</a>
->>>>>>> bddfcd1e27e3a2e24cb341ac157340d548263ce5
+        <a href="#screen1" class="bntYaTengoCuenta">Crear cuenta</a>
       </div>
 
+      <!-- Screen#3 - Olvido su contraseña-->
       <div id="screen3" class="olvidoSuContraseña padding">
         <div class="headerLogIn">
           <button class="btnLogIn">
@@ -130,34 +113,27 @@
           <h3 class="logInTitle">¿Olvidó su contraseña?</h3>
         </div>
         <p class="logInDescripcion">¿Desea enviar un código de verificación al correo ingresado?</p>
-<<<<<<< HEAD
-        <button type="submit" id="logInButton" class="btnStandar">Enviar</button>
-=======
-        <button id="sendVerificationCode" type="submit" class="logInButton">Enviar</button>
->>>>>>> bddfcd1e27e3a2e24cb341ac157340d548263ce5
+        <button id="sendVerificationCode" type="submit" class="btnStandar">Enviar</button>
       </div>
 
+      <!--Screen#4 - Código de verificación-->
       <div id="screen4" class="codigoDeVerificacion padding">
         <div class="headerLogIn">
-            <button class="btnLogIn">
-              <a href="#screen3">
-                  <img src="./images/svg/back.svg" alt="icono del boton para regresar">
-              </a>
-            </button>
-            <h3 class="logInTitle">Se envió exitosamente el código de verificación</h3>
+          <button class="btnLogIn">
+            <a href="#screen3">
+              <img src="./images/svg/back.svg" alt="icono del boton para regresar">
+            </a>
+          </button>
+          <h3 class="logInTitle">Se envió exitosamente el código de verificación</h3>
         </div>
         <form id="formCodigo" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1">
           <label for="codigo"></label>
-<<<<<<< HEAD
-          <input type="text" id="codigo" class="btnErrorStyle" placeholder="Código" required></input>
-          <button type="submit" id="btnVerificarCodigo" class="btnStandar">Verificar</button>
-=======
-          <input type="text" id="codigo" name="_id" required></input>
-          <button type="submit" class="logInButton">Verificar</button>
->>>>>>> bddfcd1e27e3a2e24cb341ac157340d548263ce5
+          <input type="text" id="codigo" name="_id" class="btnErrorStyle" placeholder="Código" required></input>
+          <button type="submit" class="btnStandar">Verificar</button>
         </form>
       </div>
 
+      <!--Screen#5 - Nueva contraseña-->
       <div id="screen5" class="nuevaContraseña padding">
         <div class="headerLogIn">
           <button class="btnLogIn">
@@ -169,39 +145,37 @@
         </div>
         <form id="formNuevaContraseña" class="formLogIn" action="https://mejenga-api.herokuapp.com/v1">
           <label for="nuevaContraseña"></label>
-          <input autocomplete="new-password" type="password" id="nuevaContraseña" class="btnErrorStyle" placeholder="Nueva contraseña" required></input>
+          <input autocomplete="new-password" type="password" id="nuevaContraseña" class="btnErrorStyle"
+            placeholder="Nueva contraseña" required></input>
           <label for="verificacion"></label>
-          <input autocomplete="new-password" type=password id="verificacion" class="btnErrorStyle" placeholder="Contraseña/verificación" required></input>
+          <input autocomplete="new-password" type=password id="verificacion" class="btnErrorStyle"
+            placeholder="Contraseña/verificación" required></input>
           <button type="submit" btn="btnNuevaContarse;a" class="btnStandar">Verificar</button>
         </form>
       </div>
 
-<<<<<<< HEAD
-
-      <div class="contraseñaConfimada padding">
-=======
-      <div id="screen6" class="contraseñaConfimada padding">
->>>>>>> bddfcd1e27e3a2e24cb341ac157340d548263ce5
-        <div class="headerLogIn btnPadding">
-          <button class="btnLogIn">
-            <a href="#screen5">
-              <img src="./images/svg/back.svg" alt="icono del boton para regresar">
-            </a>
-          </button>
-          <h3 class="logInTitle">Su contraseña ha sido confirmada exitosamente</h3>
+      <!--Screen#6 - Contraseña confirmada-->
+        <div id="screen6" class="contraseñaConfimada padding">
+          <div class="headerLogIn btnPadding">
+            <button class="btnLogIn">
+              <a href="#screen5">
+                <img src="./images/svg/back.svg" alt="icono del boton para regresar">
+              </a>
+            </button>
+            <h3 class="logInTitle">Su contraseña ha sido confirmada exitosamente</h3>
+          </div>
+          <button type="submit" id="bntContinuar" class="btnStandar">Continuar</button>
         </div>
-        <button type="submit" id="bntContinuar" class="btnStandar">Continuar</button>
-      </div>
 
-      <div id="screen7" class="bienvenido padding">
-        <h2 id="tituloDeBienvenida">Le damos la bienvenida!</h2>
-        <img src="./images/svg/Logo.svg" alt="Logo de la web app">
-        <button type="submit" class="btnCreeSuCuenta">Iniciar</button>
-      </div>
-    </div>
-    <!-- End LogIn container-->
+        <!--Screen#7 - Bienvenida-->
+        <div id="screen7" class="bienvenido padding">
+          <h2 id="tituloDeBienvenida">Le damos la bienvenida!</h2>
+          <img src="./images/svg/Logo.svg" alt="Logo de la web app">
+          <button type="submit" class="btnCreeSuCuenta">Iniciar</button>
+        </div>
+      <!-- End LogIn container-->
 
-    <script src="main.js"></script>
+      <script src="main.js"></script>
 </body>
 
 </html>

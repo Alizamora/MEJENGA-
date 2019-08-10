@@ -46,6 +46,7 @@
   margin-top: 60px;
   font-size: 13px;
   text-decoration-line: underline;
+  text-align: center;
   color: white;
   background: transparent;
   border: none;
@@ -71,7 +72,7 @@
 .headerLogIn {
   display: grid;
   grid-template-columns: 10% 1fr;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .accederCon {
@@ -107,6 +108,7 @@
 .btnStandar {
   background: #ffffff;
   border-radius: 10px;
+  border: none;
   font-weight: bold;
   width: 258px;
   height: 35px;
@@ -114,6 +116,7 @@
   text-align: center;
   letter-spacing: 0.25em;
   color: #4f4e4e;
+  margin-top: 20px;
 }
 
 .logInDescripcion {
